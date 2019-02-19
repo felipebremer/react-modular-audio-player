@@ -14,6 +14,8 @@ import Name from "../innerComponents/name";
 import Time from "../innerComponents/time";
 import SeekBar from "../innerComponents/seekBar";
 import Volume from "../innerComponents/volume";
+import Elapsed from "../innerComponents/elapsed";
+import Duration from "../innerComponents/duration";
 import { mountComponent } from "../functions/setUp";
 import { handleHoverOut } from "../functions/hover";
 
@@ -304,7 +306,9 @@ describe("AudioPlayer Component", () => {
           { type: "play" },
           { type: "rewind" },
           { type: "forward" },
-          { type: "loop" }
+          { type: "loop" },
+          // { type: "elapsed" },
+          // { type: "duration" }
         ]
       },
       {
@@ -332,7 +336,8 @@ describe("AudioPlayer Component", () => {
       expect(audioPlayer.state()).to.deep.equal(rearrangeInitialState);
     });
     it("renders the correct subcomponents", () => {
-      checkMultipleComponents(audioPlayer, [Name, Play, Rewind, Forward,Loop, Time, SeekBar, Volume]);
+      checkMultipleComponents(audioPlayer, [Name, Play, Rewind, Forward, Loop, Time, SeekBar, Volume, Elapsed, Duration]);
+      
     });
   });
 });

@@ -9,6 +9,8 @@ import {default as SeekBar} from './seekBar';
 import {default as Time} from './time';
 import {default as Volume} from './volume';
 import {default as CustomArrange} from './customArrange'
+import {default as Duration} from './duration';
+import {default as Elapsed} from './elapsed';
 
 export function renderPlay(position) {
   return <Play
@@ -103,4 +105,14 @@ export function renderCustomArrange() {
     setStyle={this.setStyle}
     setAudio={this.setAudio}
     componentObj={this.componentObj}/>
+}
+
+export function renderDuration() {
+  return <Duration
+    duration={this.state.duration}/>
+}
+
+export function renderElapsed() {
+  return <Elapsed
+    currentAudioTime={this.state.currentAudioTime}/>
 }

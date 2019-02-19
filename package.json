@@ -6,9 +6,6 @@
     "node": ">= 7.0.0"
   },
   "main": "build/index.js",
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./build/src/spec/testHelper -r jsdom-global/register './build/src/spec/*.spec.js'",
     "start": "webpack --watch",
@@ -43,11 +40,14 @@
   },
   "homepage": "https://github.com/retrofuturejosh/react-modular-audio-player",
   "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.0.0",
-    "webpack": "^2.6.1"
+    "prop-types": "^15.6.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.2"
   },
   "devDependencies": {
+    "react": "^16.8.2",
+    "webpack": "^2.6.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

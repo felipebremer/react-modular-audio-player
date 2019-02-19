@@ -1,4 +1,6 @@
 import React from 'react';
+import Elapsed from './elapsed';
+import Duration from './duration';
 
 //prop types
 import {timePropTypes} from '../spec/propTypes'
@@ -8,7 +10,7 @@ const Time = (props) => {
 
   return (
     <div className="audio-player-time">
-      {`${currentAudioTime}/${duration}`}
+      <Elapsed currentAudioTime={currentAudioTime}/>/<Duration duration={duration}/>
     </div>
   )
 }

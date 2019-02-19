@@ -38,7 +38,9 @@ body {
   }
 
   &-controls,
-  &-time {
+  &-time,
+  &-elapsed,
+  &-duration {
     display: flex;
     width: fit-content;
   }

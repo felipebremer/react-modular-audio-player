@@ -18,7 +18,9 @@ let str = PropTypes.string,
         "loop",
         "time",
         "seek",
-        "volume"
+        "volume",
+        "elapsed",
+        "duration"
       ]),
       style: PropTypes.object
     }))
@@ -156,6 +158,14 @@ export const seekBarPropTypes = {
 
 export const timePropTypes = {
   currentAudioTime: str.isRequired,
+  duration: str.isRequired
+};
+
+export const elapsedPropTypes = {
+  currentAudioTime: str.isRequired
+};
+
+export const durationPropTypes = {
   duration: str.isRequired
 };
 

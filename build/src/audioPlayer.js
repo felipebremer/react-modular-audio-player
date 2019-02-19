@@ -10,7 +10,9 @@ import {
   renderSeekBar,
   renderTime,
   renderVolume,
-  renderCustomArrange
+  renderCustomArrange,
+  renderElapsed,
+  renderDuration
 } from "./innerComponents/index";
 
 //methods
@@ -42,7 +44,9 @@ export class AudioPlayer extends Component {
       name: renderName.bind(this),
       seek: renderSeekBar.bind(this),
       time: renderTime.bind(this),
-      volume: renderVolume.bind(this)
+      volume: renderVolume.bind(this),
+      elapsed: renderElapsed.bind(this),
+      duration: renderDuration.bind(this)
     };
 
     //binding methods
@@ -112,6 +116,12 @@ export class AudioPlayer extends Component {
 
           {/* Current Time / Duration */}
           {this.props.hideTime ? null : this.componentObj.time()}
+
+          {/* Current Time */}
+          {this.props.hideElapsed ? null : this.componentObj.elapsed()}
+
+          {/* Duration */}
+          {this.props.hideDuration ? null : this.componentObj.duration()}
 
           {/* Volume Controls */}
           {this.componentObj.volume()}
